@@ -11,7 +11,7 @@ export default function Home() {
 
     <main>
       <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-      <Script src="/static/script.js" />
+      <Script src="/typer/script.js" />
       <div id="typed-strings">
         <span>- Це якисть</span>
         <span>- Це дизайн</span>
