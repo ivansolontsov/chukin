@@ -4,7 +4,7 @@ import { type FC, memo } from "react";
 interface MainProps {}
 
 const Main: FC<MainProps> = ({}) => {
-  return <div className={s.yourClassName}>это контент главной страницы</div>;
+  return <div className={s.yourClassName}>fdas</div>;
 };
 
 export default memo(Main);
