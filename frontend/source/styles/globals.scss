@@ -163,7 +163,7 @@ header ul.menu_header li.menu_header_item:hover{
 /* Три главные статьи на основной странице */
 .a_imformation_title{
   font-size: 3.5rem;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   margin-top: 0;
   margin-bottom: 0;
@@ -183,22 +183,72 @@ grid-template-columns: 1fr 1fr 1fr;
 gap: 45px;
 text-align: center;
 font-weight: 700;
+font-size: 1rem;
 margin-top: 1%;
 margin-bottom: 3%;
 width: 100%;
+text-transform: uppercase;
 }
 .a_information_item_text_bottom{
 position: relative;
 text-align: center;
-font-weight: 200;
+font-weight: 300;
 width: 48%;
 left: 50%;
+margin-bottom: 3%;
 transform: translateX(-50%);
 }
 .a_information_img{
 width: 100%;
-height: 100%;
+height: 33vh;
 }
+
+.a_information_item{
+  position: relative;
+  display: grid;
+  gap: 20px;
+  transition: all .5s;
+}
+.a_information_item:hover{
+  color: rgb(100, 190, 255)
+}
+
+/* Красная ккнопка */
+.button_container{
+  position: relative;
+}
+.default_button{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(191, 0, 0);
+    color: #ffffff;
+    border-radius: .125rem;
+    border-width: 0;
+    box-shadow: 0 0 15px #000000a6;
+    font-size: .875rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1.25rem;
+    padding: 17px 40px;
+    text-transform: uppercase;
+    transition: all .5s;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.default_button:hover{
+  background-color: rgb(122, 122, 122);
+}
+.buttom_img{
+ margin-left: 10px;
+}
+.link_button{
+  text-decoration: none;
+  color: #000000;
+}
+
+
 
 
 
@@ -215,7 +265,7 @@ height: 100%;
     font-weight: 300;
 }
 .article_main_container{
-
+ display: block;
 }
 
 
@@ -253,12 +303,28 @@ height: 100%;
   width: 100%;
   height: 350px;
 }
+.aboutorder_conatainer_main{
+  position: relative;
+  width: 83vw;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: .875rem;
+ }
 .a_information_items_container{
-
+  overflow: hidden;
+  margin: 0 auto;
   grid-template-columns: 1fr;
-
+  gap: 20px;
+  width: 100vw;
 }
-
+.a_imformation_container_main{
+  position: relative;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 1%;
+}
   }
 
   
