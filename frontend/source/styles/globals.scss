@@ -15,7 +15,7 @@
   
   body {
     margin: 0;
-    font-family: Montserrat,serif;
+    font-family: 'Montserrat', serif;
     background-color: rgb(255, 255, 255);
   }
   
@@ -128,7 +128,84 @@
     background-color:#000000;
     opacity: 0.5;
    }
-  
+
+   /* О заказе описание шагов */
+   .aboutorder_conatainer_main{
+    position: relative;
+    width: 83vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-size: .875rem;
+   }
+   .aboutorder_container_item_v1{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    overflow: hidden;
+    text-align: center;
+   }
+   .aboutorder_container_item_v2{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    overflow: hidden;
+    text-align: center;
+   }
+  .aboutorder_img_container{
+    position: relative;
+  }
+  .aboutorder_img{
+    width: 100%;
+    height: 100%;
+
+
+  }
+
+
+/* Три главные статьи на основной странице */
+.a_imformation_title{
+    font-size: 3.5rem;
+    font-weight: 300;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.a_imformation_container_main{
+    position: relative;
+    width: 83vw;
+    left: 50%;
+    transform: translateX(-50%);
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 1%;
+}
+.a_information_items_container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 45px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 1%;
+  margin-bottom: 3%;
+  width: 100%;
+}
+.a_information_item_text_bottom{
+  position: relative;
+  text-align: center;
+  font-weight: 200;
+  width: 48%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.a_information_img{
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
+
   .article_main{
     font-size: 3rem;
       line-height: 1;
@@ -177,12 +254,12 @@
     width: 100%;
     height: 350px;
   }
-  .nav_item_image_zoom{
-      width: 500px;
-      height: 100%;
-  
-   }
-  
+  .a_information_items_container{
+
+    grid-template-columns: 1fr;
+
+  }
+
     }
   
     

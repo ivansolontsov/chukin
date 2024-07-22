@@ -17,6 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ua">
+      
       <body className={inter.className}>
         <Header /> 
         {children}
