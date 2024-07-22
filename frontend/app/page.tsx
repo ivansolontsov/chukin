@@ -20,6 +20,13 @@ export default function Home() {
         <span>"Chukin🞄M"&nbsp;</span>
         <span id="typed"></span>
       </div>
+      <div className="call_button_container"><div className="button_container_zakaz"><button className="default_button">Замовити дзвінок<Image
+          className="buttom_img"
+          src="/phone.svg"
+          alt=""
+          width={20}
+          height={20}
+        /> </button></div></div>
       {/* Свайпер */}
       <div className="swiper_container">
         <Swiper_back />
@@ -28,16 +35,32 @@ export default function Home() {
       <ul className="nav_cards_container">
         <li className="nav_item">
           <div className="nav_item_text">
-            <span>Шафи</span>
+            <span>Передпокій</span>
           </div>
           <div className="nav_item_image">
             <Link href="./pages/portfolio">
               <Image
                 className="nav_item_image_zoom"
-                src="/nav_cards/bedroom.jpg"
+                src="/nav_cards/cupboard.jpg"
                 alt=""
-                width={327}
-                height={350}
+                width={1024}
+                height={768}
+              />
+            </Link>
+          </div>
+        </li>
+        <li className="nav_item">
+          <div className="nav_item_text">
+            <span>Кухні</span>
+          </div>
+          <div className="nav_item_image">
+            <Link href="./pages/portfolio">
+              <Image
+                className="nav_item_image_zoom"
+                src="/nav_cards/kitchen.jpg"
+                alt=""
+                width={1024}
+                height={768}
               />
             </Link>
           </div>
@@ -50,26 +73,10 @@ export default function Home() {
             <Link href="./pages/portfolio">
               <Image
                 className="nav_item_image_zoom"
-                src="/nav_cards/bedroom.jpg"
+                src="/nav_cards/shafi.jpg"
                 alt=""
-                width={327}
-                height={350}
-              />
-            </Link>
-          </div>
-        </li>
-        <li className="nav_item">
-          <div className="nav_item_text">
-            <span>Шафи</span>
-          </div>
-          <div className="nav_item_image">
-            <Link href="./pages/portfolio">
-              <Image
-                className="nav_item_image_zoom"
-                src="/nav_cards/bedroom.jpg"
-                alt=""
-                width={327}
-                height={350}
+                width={1024}
+                height={768}
               />
             </Link>
           </div>
@@ -107,7 +114,7 @@ export default function Home() {
       <div className="a_imformation_container_main">
         <h2 className="a_imformation_title">ВАЖЛИВА ІНФОРМАЦІЯ</h2>
         <div className="a_information_items_container">
-        <Link className="link_button" href="./pages/portfolio"><div className="a_information_item">
+          <Link className="link_button" href="./pages/portfolio"><div className="a_information_item">
             <div className="a_information_ing_container">
               <Image
                 className="a_information_img"
@@ -153,7 +160,80 @@ export default function Home() {
           height={20}
         /> </button></div></Link>
       </div>
+      {/* Мебель под заказ */}
+      <div className="mebel_zakaz_container">
+      <h2 className="mebel_zakaz_title">МЕБЛІ ПІД ЗАМОВЛЕННЯ CHUKIN•M</h2>
+      <span className="mebel_zakaz_text1">ЯКІСТЬ ТА НАДІЙНІСТЬ</span>
+      <span className="mebel_zakaz_text2">Дизайнерські меблі на кухню, у передпокій, вітальню та спальню. Підкресліть індивідуальність інтер’єру за допомогою меблів на замовлення від виробника Chukin•m</span>
+      <div className="mebel_zakaz_buttons_container">
+      <Link className="link_button" href="./pages/portfolio"><div className="button_container_zakaz"><button className="default_button">Портфоліо<Image
+          className="buttom_img"
+          src="/portfolio.svg"
+          alt=""
+          width={20}
+          height={20}
+        /> </button></div></Link>
+        <Link className="link_button" href="./pages/portfolio"><div className="button_container_zakaz"><button className="mebel_default_button">Зателефонувати<Image
+          className="buttom_img"
+          src="/phone.svg"
+          alt=""
+          width={20}
+          height={20}
+        /> </button></div></Link>
+      </div>
+         
+      </div>
+      {/* Наши достоинства */}
+      <div className="perevagi_container">
+      <h2 className="mebel_zakaz_title">НАШІ ПЕРЕВАГИ</h2>
+      <span className="mebel_zakaz_text1">НАШ КЛІЄНТ ЗАВЖДИ ЗАДОВОЛЕНИЙ!</span>
+      <div className="perevagi_items">
+        <div className="perevagi_item">
+          <div className="perevagi_head">
+           <span className="perevagi_tile">ПУНКТУАЛЬНІСТЬ</span>
+           <Image
+          className="perevagi_img"
+          src="/clock.svg"
+          alt=""
+          width={50}
+          height={50}
+        />
+          </div>
+          <p className="perevagi_text">Замовляючи меблі в Chukin•m, ви можете розраховувати на виконання вашого замовлення точно в обумовлений термін.</p>
+        </div>
+        <div className="perevagi_item">
+          <div className="perevagi_head">
+           <span className="perevagi_tile">ЯКІСТЬ</span>
+           <Image
+          className="perevagi_img"
+          src="/dimond.svg"
+          alt=""
+          width={50}
+          height={50}
+        />
+          </div>
+          <p className="perevagi_text">Ми створюємо якісні та надійні меблі, які прослужать вам не один рік. Крім того, вони будуть красивими і чудово доповнять будь-який інтер'єр.</p>
+        </div>
+        <div className="perevagi_item">
+          <div className="perevagi_head">
+           <span className="perevagi_tile">НАДІЙНІСТЬ</span>
+           <Image
+          className="perevagi_img"
+          src="/like.svg"
+          alt=""
+          width={50}
+          height={50}
+        />
+          </div>
+          <p className="perevagi_text">Надійність наших меблів підтверджена багаторічним досвідом, професійним підходом і вищим рівнем виконання.</p>
+        </div>
 
+      
+      </div>
+
+
+
+      </div>
 
 
     </main>

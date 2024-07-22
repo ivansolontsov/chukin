@@ -20,72 +20,68 @@ body {
 
 /* хеадер и его соержимое */
 header {
-    align-items: center;
     font-size: .875rem;
     font-weight: 700;
     min-width: 320px;
     color:black;
     background-color: #ffffff;
     box-shadow: 0 0 12px #00000017;
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 40px;
     position: relative;
     z-index: 5;
     width: auto
 }
- header ul.menu_header {
-     float:right;
-     list-style: none;
- }
-header ul.menu_header li.menu_header_item {
-  color:rgb(5, 5, 5);
-  display: inline;
-  margin-left: 20px;
-  text-decoration:none;
-  position:relative;
-  transition: color 0.4s;
+.header_grid{
+  display: grid;
+  grid-template-columns: 85% 15%;
+  padding: 15px 40px;
 }
-header ul.menu_header li.menu_header_item:before{
-  position:absolute;
-  bottom: -10px;
-  content: " ";
-  border-bottom: 5px solid #bf0000;
-  transform: scale(0,1);
-  width:100%;
-  transition: transform 0.3s
+.menu_header{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5px;
+  list-style: none;
+  grid-auto-columns: auto;
+
+
 }
-header ul.menu_header li.menu_header_item:hover:before{
-  transform: scale(1,1); 
+.menu_header_item{
+  position: relative;
+  justify-self: center;
 }
-header ul.menu_header li.menu_header_item:hover{
-  color: #bf0000;
- }
- .container_social_href_facebook{
+.header_left_container{
   display: flex;
-  position: absolute;
-  margin-left: 170px;
-  fill :#bf0000
- }
- .container_social_href_insta{
-  display: flex;
-  position: absolute;
-  margin-left: 205px;
- }
+  flex-direction: row;
+  
+}
+ 
  .img_swiper{
   height: 550px;
   box-shadow: 0 0 12px #00000017;
 
 
  }
+ /* Кнопка на карусели */
+.call_button_container{
+ position: absolute;
+ z-index: 3;
+ margin-left: auto;
+ margin-right: auto;
+ top: 360px;
+ left: 0;
+ right: 0;
 
+}
 /* 3 карточки навигации */
 .nav_cards_container{
+ width: 53vw;
+ height: 36.5vh;
+ left: 50%;
+ transform: translateX(-50%);
  position: relative;
  bottom: 40px;
  z-index: 2;
  display: grid;
- grid-template-columns: 327px 327px 327px;
+ grid-template-columns: 1fr 1fr 1fr;
  grid-gap: 20px;
  justify-content: center;
  padding-inline-start: 0;
@@ -95,12 +91,13 @@ header ul.menu_header li.menu_header_item:hover{
   position: relative;
   display: flex;
   justify-content: center;
+  align-content: center;
   box-shadow: 0 0 12px #00000017;
   overflow: hidden;
   background-color:#000000;
  }
  .nav_item_text{
-  z-index: 2;
+  z-index: 3;
   position: absolute;
   top: 280px;
   color: #ffffff;
@@ -120,6 +117,7 @@ header ul.menu_header li.menu_header_item:hover{
   height: 100%;
   transition: transform .8s ease-out;
   overflow: hidden;
+  object-fit: cover;
  }
  .nav_item_image_zoom:hover{
   transform: scale(1.1);
@@ -175,7 +173,7 @@ header ul.menu_header li.menu_header_item:hover{
   transform: translateX(-50%);
   display: grid;
   grid-template-columns: 1fr;
-  margin-top: 1%;
+  margin-top: 3%;
 }
 .a_information_items_container{
 display: grid;
@@ -185,7 +183,6 @@ text-align: center;
 font-weight: 700;
 font-size: 1rem;
 margin-top: 1%;
-margin-bottom: 3%;
 width: 100%;
 text-transform: uppercase;
 }
@@ -195,12 +192,13 @@ text-align: center;
 font-weight: 300;
 width: 48%;
 left: 50%;
-margin-bottom: 3%;
+margin-bottom: 2%;
 transform: translateX(-50%);
 }
 .a_information_img{
 width: 100%;
 height: 33vh;
+box-shadow: 0 0 12px #00000017;
 }
 
 .a_information_item{
@@ -212,10 +210,107 @@ height: 33vh;
 .a_information_item:hover{
   color: rgb(100, 190, 255)
 }
-
+/* Мебель под заказ */
+.mebel_zakaz_title{
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.mebel_zakaz_container{
+  position: relative;
+  display: grid;
+  margin-top: 3%;
+  gap: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  grid-template-columns: 1fr;
+  width: 50vw;
+}
+.mebel_zakaz_text1{
+  position: relative;
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 7px;
+  color: darkgrey;
+}
+.mebel_zakaz_text2{
+  position: relative;
+  text-align: center;
+  font-weight: 300;
+  width: 80%;
+  left: 50%;
+  margin-bottom: 2%;
+  transform: translateX(-50%);  
+}
+.mebel_zakaz_buttons_container{
+ display: grid;
+ grid-template-columns: 211px 211px;
+ justify-content: center;
+ gap: 20px;
+}
+.mebel_default_button{
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(191, 0, 0);
+    color: #ffffff;
+    border-radius: .125rem;
+    border-width: 0;
+    box-shadow: 0 0 15px #000000a6;
+    font-size: .875rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1.25rem;
+    padding: 17px 12px;
+    text-transform: uppercase;
+    transition: all .5s;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+.mebel_default_button:hover{
+  background-color: rgb(122, 122, 122);
+}
+/* Достоинста */
+.perevagi_container{
+  position: relative;
+  display: grid;
+  margin-top: 3%;
+  gap: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  grid-template-columns: 1fr;
+  width: 50vw;
+}
+.perevagi_items{
+  position: relative;
+  margin-top: 0%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+}
+.perevagi_head{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  font-size: 1.125rem;
+  font-weight: 700;
+  align-items: center;
+}
+.perevagi_text{
+  position: relative;
+  bottom: 5%;
+}
+.perevagi_img{
+  position: relative;
+}
 /* Красная ккнопка */
 .button_container{
   position: relative;
+  width: 248px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .default_button{
   position: relative;
@@ -286,23 +381,59 @@ height: 33vh;
 /* Ёбань aka. мобильная вёрстка */
  @media  (max-width: 450px) {
   .nav_cards_container{
-    z-index: 3;
-   display: grid;
-   grid-template-columns: 300px;
+   height: 100vh;
+   grid-template-columns: 1fr;
    grid-gap: 10px;
-   justify-content: center;
-   padding-inline-start: 0;
-   bottom: 0px;
   }
-.nav_item:not(:last-child){
-  margin-right: 0;
-  margin-top: 0;
-  margin-bottom: 5px;
+  .header_grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 0 0 0 0;
+}
+.header_left_container{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+ justify-items: center;
+ padding-top: 1%;
+ 
+
+}
+.header_right_container{
+
+}
+
+.menu_header{
+  font-size: 1.1rem;
+  position: relative;
+  padding-right: 40px;
+}
+.a_imformation_title{
+  font-size: 2.3rem;
 }
 .nav_item{
-  width: 100%;
-  height: 350px;
+  position: relative;
+  width: 170%;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
 }
+.nav_item_text{
+  z-index: 3;
+  position: absolute;
+  top: 80%;
+  color: #ffffff;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 300;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: #ffffff;
+  border-style: solid;
+  border-width: 1px;
+  pointer-events: none;
+ }
+  
 .aboutorder_conatainer_main{
   position: relative;
   width: 83vw;
@@ -324,6 +455,29 @@ height: 33vh;
   display: grid;
   grid-template-columns: 1fr;
   margin-top: 1%;
+}
+.mebel_zakaz_container{
+  width: 100vw;
+}
+.mebel_zakaz_buttons_container{
+  grid-template-columns: 1fr;
+}
+.mebel_zakaz_title{
+font-size: 2.3rem;
+
+}
+.perevagi_container{
+width: 100vw;
+}
+.perevagi_items{
+  display: grid;
+  grid-template-columns: 80vw;
+  gap: 0;
+  justify-content: center;
+}
+.perevagi_item{
+
+
 }
   }
 
