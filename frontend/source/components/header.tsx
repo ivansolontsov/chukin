@@ -43,7 +43,7 @@ export default function header() {
       </div>
       <div className="header_right_container">
         <ul className="menu_header">
-          <li className="menu_header_item">Головна</li>
+        <Link className="link_button" href="/"><li className="menu_header_item">Головна</li></Link>
           <Link className="link_button" href="/articles"><li className="menu_header_item">Статті</li></Link>
           <li className="menu_header_item">Портфоліо</li>
         </ul>

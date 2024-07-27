@@ -1,11 +1,15 @@
+'use client'
 import Link from "next/link";
 import { Swiper_back } from "@/source/components/swiper_back";
+import { Popup } from "@/source/components/popup/popup";
 import Image from "next/image";
 import Script from 'next/script'
+import React, {useState} from "react";
 
 
 
 export default function Home() {
+  const [PopupInfoIsOpen, setPopupInfoOpen] = useState(false);
 
   return (
     <main>
@@ -20,7 +24,11 @@ export default function Home() {
         <span>"Chukin🞄M"&nbsp;</span>
         <span id="typed"></span>
       </div>
-      <div className="call_button_container"><div className="button_container_zakaz"><button className="default_button">Замовити дзвінок<Image
+      <Popup
+      isOpen={PopupInfoIsOpen}
+      onClose={() => setPopupInfoOpen(false)}
+       />
+      <div className="call_button_container"><div className="button_container_zakaz"><button className="default_button" onClick={()=> setPopupInfoOpen(true)}>Замовити дзвінок<Image
           className="buttom_img"
           src="/phone.svg"
           alt=""
