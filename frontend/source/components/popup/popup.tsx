@@ -28,17 +28,18 @@ export const Popup = ({ isOpen, onClose }) => {
                             <div className="inputs">
                                 <div className="input_item">
                                 <label for="phone">Телефон</label>
-                                <input type="text" id="phone" name="phone" required minlength="4" maxlength="8" size="10" className="input_pole"/>
+                                <input type="text" id="phone" name="phone" required minlength="" maxlength="66" size="10" placeholder="+38(000) 0000 00" className="input_pole" />
                                 </div>
                                 <div className="input_item">
                                 <label for="name">Ім'я</label>
-                                <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" className="input_pole"/>
+                                <input type="text" id="name" name="name" required minlength="" maxlength="66" size="10" placeholder="Як Вас звати" className="input_pole"/>
                                 </div>
                                 <div className="input_item">
                                 <label for="coment">Коментар</label>
-                                <input type="text" id="coment" name="coment" required minlength="4" maxlength="8" size="10" className="input_pole"/>
+                                <textarea type="text" id="coment" name="coment" required minlength="" maxlength="150" size="10" placeholder="Введіть Ваш коментар" className="input_pole_comment"/>
                                 </div>
                             </div>
+                            <div className="button_container_popup"><button className="default_button">Відправити</button></div>
                             
 
                         </div>
