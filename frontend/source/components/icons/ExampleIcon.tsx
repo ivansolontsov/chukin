@@ -7,8 +7,8 @@ import type { CustomIconComponentProps } from "@ant-design/icons/lib/components/
 const FacebookIconSvgCode = () => (
   <svg
     fill="currentColor"
-    width="1em"
-    height="1em"
+    width="32px"
+    height="32px"
     viewBox="0 0 32 32"
     xmlns="http://www.w3.org/2000/svg"
   >
