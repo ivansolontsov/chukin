@@ -1,0 +1,14 @@
+.article_main_container{
+    position: relative;
+    width: 83vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 2%;
+  }
+  .article_title{
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .aricle_content{
+    line-height: 1.5em;
+  }

@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 
-export const Swiper_back= () => {
+export const Swiper_module= () => {
   return (
     <Swiper
       modules={[Autoplay]}

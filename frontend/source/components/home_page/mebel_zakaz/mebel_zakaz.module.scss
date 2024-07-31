@@ -1,0 +1,113 @@
+.mebel_zakaz_title{
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  .mebel_zakaz_container{
+    position: relative;
+    display: grid;
+    margin-top: 3%;
+    gap: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    grid-template-columns: 1fr;
+    width: 50vw;
+  }
+  .mebel_zakaz_text1{
+    position: relative;
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 7px;
+    color: darkgrey;
+  }
+  .mebel_zakaz_text2{
+    position: relative;
+    text-align: center;
+    font-weight: 300;
+    width: 80%;
+    left: 50%;
+    margin-bottom: 2%;
+    transform: translateX(-50%);  
+  }
+  .mebel_zakaz_buttons_container{
+   display: grid;
+   grid-template-columns: 211px 211px;
+   justify-content: center;
+   gap: 20px;
+  }
+  .mebel_default_button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(191, 0, 0);
+      color: #ffffff;
+      border-radius: .125rem;
+      border-width: 0;
+      box-shadow: 0 0 15px #000000a6;
+      font-size: .875rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      line-height: 1.25rem;
+      padding: 17px 12px;
+      text-transform: uppercase;
+      transition: all .5s;
+      display: flex;
+      flex-direction: row;
+      cursor: pointer;
+  }
+  .mebel_default_button:hover{
+    background-color: rgb(122, 122, 122);
+  }
+
+  .button_container{
+    position: relative;
+    width: 248px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .default_button{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(191, 0, 0);
+      color: #ffffff;
+      border-radius: .125rem;
+      border-width: 0;
+      box-shadow: 0 0 15px #000000a6;
+      font-size: .875rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      line-height: 1.25rem;
+      padding: 17px 40px;
+      text-transform: uppercase;
+      transition: all .5s;
+      display: flex;
+      flex-direction: row;
+      cursor: pointer;
+  }
+  .default_button:hover{
+    background-color: rgb(122, 122, 122);
+  }
+  .buttom_img{
+   margin-left: 10px;
+  }
+  .link_button{
+    text-decoration: none;
+    color: #000000;
+  }
+
+  @media  (max-width: 450px) {
+  .mebel_zakaz_container{
+    width: 100vw;
+    margin-bottom: 12%;
+  }
+  .mebel_zakaz_buttons_container{
+    grid-template-columns: 1fr;
+  }
+  .mebel_zakaz_title{
+  font-size: 2.3rem;
+  }
+}

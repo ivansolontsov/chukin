@@ -1,0 +1,68 @@
+.perevagi_container{
+    position: relative;
+    display: grid;
+    margin-top: 3%;
+    gap: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    grid-template-columns: 1fr;
+    width: 50vw;
+  }
+  .perevagi_items{
+    position: relative;
+    margin-top: 0%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+  }
+  .perevagi_head{
+    display: grid;
+    grid-template-columns: 80% 20%;
+    font-size: 1.125rem;
+    font-weight: 700;
+    align-items: center;
+  }
+  .perevagi_text{
+    position: relative;
+    bottom: 5%;
+  }
+  .perevagi_img{
+    position: relative;
+  }
+  .mebel_zakaz_title{
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .mebel_zakaz_text1{
+    position: relative;
+    text-align: center;
+    font-size: 0.85rem;
+    letter-spacing: 7px;
+    color: darkgrey;
+  }
+
+  @media  (max-width: 450px) {
+
+  .perevagi_container{
+    width: 100vw;
+    }
+    .perevagi_items{
+      display: grid;
+      grid-template-columns: 80vw;
+      gap: 0;
+      justify-content: center;
+    }
+
+    .mebel_zakaz_title{
+      font-size: 2.35rem;
+      font-weight: 400;
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+  }
+
