@@ -181,13 +181,13 @@ export default function Home() {
           width={20}
           height={20}
         /> </button></div></Link>
-        <Link className="link_button" href="./pages/portfolio"><div className="button_container_zakaz"><button className="mebel_default_button">Зателефонувати<Image
+        <div className="button_container_zakaz"><button className="mebel_default_button" onClick={()=> setPopupInfoOpen(true)}>Зателефонувати<Image
           className="buttom_img"
           src="/phone.svg"
           alt=""
           width={20}
           height={20}
-        /> </button></div></Link>
+        /> </button></div>
       </div>
          
       </div>
