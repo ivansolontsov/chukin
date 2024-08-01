@@ -19,14 +19,13 @@ export default function header() {
               height={32}
             />
           </div></Link>
-
           <div className={s.container_social_href_facebook}>
-            <a href="https://www.facebook.com/rlmebel/" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=61556394524366/" target="_blank">
               <IconFacebook className={s.social_icon} />
             </a>
           </div>
           <div className={s.container_social_href_insta}>
-            <a href="https://www.instagram.com/rl_mebel/" target="_blank">
+            <a href="https://www.instagram.com/chukin.meb/" target="_blank">
               <IconInsta className={s.social_icon} />
             </a>
           </div>

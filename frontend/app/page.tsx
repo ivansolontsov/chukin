@@ -15,7 +15,7 @@ export default function Home() {
       <Typer_text />
       <Swiper_home />
       <Nav_cards />
-      {/* <About_order /> */}
+      <About_order />
       <Articles_nav />
       <Mebel_zakaz />
       <Perevagi />
