@@ -1,21 +1,27 @@
-'use client'
-import React from 'react'
-import Script from 'next/script'
-import './typer.scss';
-
-export default function Typer_text() {
+import { TypeAnimation } from 'react-type-animation';
+import "./typer.scss"
+ 
+export const Typer_text = () => {
   return (
-    <main>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-      <Script src="/typer/script.js" />
-      <div id="typed-strings">
-        <span>- Це якисть</span>
-        <span>- Це дизайн</span>
-      </div>
-      <div className="text-typing">
-        <span>"Chukin🞄M"&nbsp;</span>
-        <span id="typed"></span>
-      </div>
-      </main>
-  )
-}
+    <div className="text-typing">
+      <span>"Chukin🞄M"&nbsp;</span>
+    <TypeAnimation
+    
+      sequence={[
+        '- ЦЕ ЯКІСТЬ', // Types 'One'
+        3000, // Waits 1s
+        '- ЦЕ ДИЗАЙН', // Deletes 'One' and types 'Two'
+        3000, // Waits 2s
+        () => {
+          console.log('Sequence completed');
+        },
+      ]}
+      wrapper="span"
+      cursor={false}
+      repeat={Infinity}
+      speed={1}
+      style={{ fontSize: 'currentSize', display: 'inline-block' }}
+    />
+    </div>
+  );
+};

@@ -1,5 +1,5 @@
 'use client'
-import Typer_text from "@/source/components/home_page/typer/typer";
+import {Typer_text } from "@/source/components/home_page/typer/typer";
 import Swiper_home from "@/source/components/home_page/swiper/swiper_home";
 import Nav_cards from "@/source/components/home_page/nav_cards/nav_cards";
 import About_order from "@/source/components/home_page/about_order/about_order";

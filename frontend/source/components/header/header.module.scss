@@ -19,6 +19,10 @@
   text-align: center;
   transition: 0.5s;
 }
+.header_right_container{
+  width: 100%;
+  position: relative;
+}
 
 .menu_header_item:hover{
   color:  rgb(233, 30, 99);
@@ -84,10 +88,18 @@
   
   }
   
+  
   .menu_header{
     font-size: 1.1rem;
     position: relative;
     padding-right: 40px;
   }
 
+}
+
+@media  (max-width: 350px) {
+.header_right_container{
+  width: 30%;
+  position: relative;
+}
 }
