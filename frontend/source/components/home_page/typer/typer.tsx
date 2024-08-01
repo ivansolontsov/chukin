@@ -8,10 +8,10 @@ export const Typer_text = () => {
     <TypeAnimation
     
       sequence={[
-        '- ЦЕ ЯКІСТЬ', // Types 'One'
-        3000, // Waits 1s
-        '- ЦЕ ДИЗАЙН', // Deletes 'One' and types 'Two'
-        3000, // Waits 2s
+        '- ЦЕ ЯКІСТЬ',
+        3000,
+        '- ЦЕ ДИЗАЙН', 
+        3000,
         () => {
           console.log('Sequence completed');
         },
