@@ -27,6 +27,7 @@
 .menu_header_item:hover{
   color:  rgb(233, 30, 99);
 }
+
 .menu_header_item:after {
   position: absolute;
   content: '';
@@ -40,6 +41,10 @@
 .menu_header_item::after {
   width: 0;
   transition: 0.5s;
+}
+.menu_header_item:hover:after {
+  width: 100%;
+
 }
 .menu_header_item:hover:after {
   width: 100%;

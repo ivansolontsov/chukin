@@ -1,0 +1,152 @@
+.footer_container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 15px 40px;
+}
+
+.footer_left_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_center_container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer_right_container {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px
+}
+
+.footer_right_container_top {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.phone_container {
+    position: relative;
+
+}
+
+.footer_right_container_bottom {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.social_container {
+    align-items: center;
+    position: relative;
+    color: #ffffff;
+
+}
+
+.social_text {
+    position: relative;
+    padding-left: 3%;
+    transition: 0.5s;
+}
+
+.social_icon {
+    position: relative;
+    transition: 0.5s;
+}
+
+.social_link {
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social_link:hover {
+    color: #ff0000;
+    text-decoration: none;
+}
+
+@media (max-width: 450px) {
+    .footer_container {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 15px 40px;
+        gap: 20px;
+    }
+
+    .footer_right_container_top {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+    .footer_right_container_bottom {
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.button_container {
+    position: relative;
+    width: 248px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.default_button {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(191, 0, 0);
+    color: #ffffff;
+    border-radius: .125rem;
+    border-width: 0;
+    box-shadow: 0 0 15px #000000a6;
+    font-size: .875rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+    line-height: 1.25rem;
+    padding: 17px 40px;
+    text-transform: uppercase;
+    transition: all .5s;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.default_button:hover {
+    background-color: rgb(122, 122, 122);
+}
+
+.buttom_img {
+    margin-left: 10px;
+}
+
+.link_button {
+    text-decoration: none;
+    color: #000000;
+}

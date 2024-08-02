@@ -13,6 +13,18 @@ header {
   z-index: 5;
   width: auto
 }
+footer {
+  font-size: .875rem;
+  font-weight: 700;
+  min-width: 300px;
+  color:rgb(255, 255, 255);
+  background-color: #000000;
+  box-shadow: 0 0 12px #00000017;
+  position: relative;
+  z-index: 5;
+  margin-top: 2%;
+  
+}
  .img_swiper{
   height: 550px;
   box-shadow: 0 0 12px #00000017;
