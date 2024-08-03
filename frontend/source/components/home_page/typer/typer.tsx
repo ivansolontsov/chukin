@@ -1,27 +1,33 @@
-import { TypeAnimation } from 'react-type-animation';
-import "./typer.scss"
- 
-export const Typer_text = () => {
+'use client'
+
+import { TypeAnimation } from "react-type-animation";
+import "./typer.scss";
+import { IDictionaries } from "@/dictionaries";
+
+interface TyperTextProps {
+  dictionary: IDictionaries;
+}
+
+export const Typer_text = ({ dictionary }: TyperTextProps) => {
   return (
     <div className="text-typing">
       <span>"Chukin🞄M"&nbsp;</span>
-    <TypeAnimation
-    
-      sequence={[
-        '- ЦЕ ЯКІСТЬ',
-        3000,
-        '- ЦЕ ДИЗАЙН', 
-        3000,
-        () => {
-          console.log('Sequence completed');
-        },
-      ]}
-      wrapper="span"
-      cursor={false}
-      repeat={Infinity}
-      speed={1}
-      style={{ fontSize: 'currentSize', display: 'inline-block' }}
-    />
+      <TypeAnimation
+        sequence={[
+          dictionary.typerText.text1,
+          3000,
+          dictionary.typerText.text2,
+          3000,
+          () => {
+            console.log("Sequence completed");
+          },
+        ]}
+        wrapper="span"
+        cursor={false}
+        repeat={Infinity}
+        speed={1}
+        style={{ fontSize: "currentSize", display: "inline-block" }}
+      />
     </div>
   );
 };

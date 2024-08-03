@@ -22,13 +22,13 @@ export const Swiper_module= () => {
     >
       
       <SwiperSlide>
-        <img className='img_swiper' src='/swiper/slide1.jpg'/>
+        <img className='img_swiper' src='/ru/swiper/slide1.jpg'/>
       </SwiperSlide>
       <SwiperSlide>
-      <img className='img_swiper' src='/swiper/slide2.jpg'/>
+      <img className='img_swiper' src='/ru/swiper/slide2.jpg'/>
       </SwiperSlide>
       <SwiperSlide>
-      <img className='img_swiper' src='/swiper/slide3.jpg'/>
+      <img className='img_swiper' src='/ru/swiper/slide3.jpg'/>
       </SwiperSlide>
     </Swiper>
   );

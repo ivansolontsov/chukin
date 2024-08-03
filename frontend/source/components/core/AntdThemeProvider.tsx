@@ -1,17 +1,24 @@
 "use client";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { ConfigProvider } from "antd";
-import locale from "antd/locale/ru_RU";
-import dayjs from "dayjs";
-import "dayjs/locale/ru";
+import ru from "antd/locale/ru_RU";
+import ua from "antd/locale/uk_UA";
+import { useParams } from "next/navigation";
+import { TLocales } from "@/dictionaries";
+import { Locale } from "antd/lib/locale";
 
-dayjs.locale("ru");
+const antdLocales: Record<TLocales, Locale> = {
+  ru: ru,
+  ua: ua,
+};
 
 interface AntdThemeProviderProps {
   children: React.ReactNode;
 }
 
 function AntdThemeProvider({ children }: AntdThemeProviderProps) {
+  const { lang } = useParams<{ lang: TLocales }>();
+
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -22,7 +29,7 @@ function AntdThemeProvider({ children }: AntdThemeProviderProps) {
     return null;
   }
 
-  return <ConfigProvider locale={locale}>{children}</ConfigProvider>;
+  return <ConfigProvider locale={antdLocales[lang]}>{children}</ConfigProvider>;
 }
 
 export default AntdThemeProvider;
