@@ -5,12 +5,18 @@ import Link from "next/link";
 import s from "./nav_cards.module.scss";
 import { useParams } from "next/navigation";
 
-export default function Nav_cards() {
+import { IDictionaries } from "@/dictionaries";
+
+interface NavcTextProps {
+  dictionary: IDictionaries;
+}
+
+export default function Nav_cards({ dictionary }: NavcTextProps) {
   return (
     <ul className={s.nav_cards_container}>
       <li className={s.nav_item}>
         <div className={s.nav_item_text}>
-          <span>Передпокій</span>
+          <span>{dictionary.NavcText.text1}</span>
         </div>
         <div className={s.nav_item_image}>
           <Link href="./pages/portfolio">
@@ -26,7 +32,7 @@ export default function Nav_cards() {
       </li>
       <li className={s.nav_item}>
         <div className={s.nav_item_text}>
-          <span>Кухні</span>
+          <span>{dictionary.NavcText.text2}</span>
         </div>
         <div className={s.nav_item_image}>
           <Link href="./pages/portfolio">
@@ -42,7 +48,7 @@ export default function Nav_cards() {
       </li>
       <li className={s.nav_item}>
         <div className={s.nav_item_text}>
-          <span>Шафи</span>
+          <span>{dictionary.NavcText.text3}</span>
         </div>
         <div className={s.nav_item_image}>
           <Link href="./pages/portfolio">

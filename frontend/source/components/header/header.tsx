@@ -4,8 +4,13 @@ import s from "./header.module.scss";
 import { IconFacebook } from "@/source/components/icons/ExampleIcon";
 import { IconInsta } from "@/source/components/icons/InstaIcon";
 import Link from "next/link";
+import { IDictionaries } from "@/dictionaries";
 
-export default function header() {
+interface HeaderTextProps {
+  dictionary: IDictionaries;
+}
+
+export default function header({ dictionary }: HeaderTextProps) {
   return (
     <header>
       <div className={s.header_grid}>
@@ -38,12 +43,12 @@ export default function header() {
         <div className={s.header_right_container}>
           <ul className={s.menu_header}>
             <Link className={s.link_button} href="/">
-              <li className={s.menu_header_item}>Головна</li>
+              <li className={s.menu_header_item}>{dictionary.HeaderText.text1}</li>
             </Link>
             <Link className={s.link_button} href="/ru/articles">
-              <li className={s.menu_header_item}>Статті</li>
+              <li className={s.menu_header_item}>{dictionary.HeaderText.text2}</li>
             </Link>
-            <li className={s.menu_header_item}>Портфоліо</li>
+            <li className={s.menu_header_item}>{dictionary.HeaderText.text3}</li>
           </ul>
         </div>
       </div>

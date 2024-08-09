@@ -4,10 +4,16 @@ import Link from "next/link";
 import Image from "next/image";
 import s from "./articles_nav.module.scss";
 
-export default function Aricles_nav() {
+import { IDictionaries } from "@/dictionaries";
+
+interface AnavTextProps {
+  dictionary: IDictionaries;
+}
+
+export default function Aricles_nav({ dictionary }: AnavTextProps) {
   return (
     <div className={s.a_imformation_container_main}>
-      <h2 className={s.a_imformation_title}>ВАЖЛИВА ІНФОРМАЦІЯ</h2>
+      <h2 className={s.a_imformation_title}>{dictionary.AnavText.title}</h2>
       <div className={s.a_information_items_container}>
         <Link className={s.link_button} href="./pages/portfolio">
           <div className={s.a_information_item}>
@@ -21,7 +27,7 @@ export default function Aricles_nav() {
               />
             </div>
             <span className={s.a_information_item_text}>
-              З яких матеріалів виготовляються меблі RL-Mebel
+            {dictionary.AnavText.card1}
             </span>
           </div>
         </Link>
@@ -37,7 +43,7 @@ export default function Aricles_nav() {
               />
             </div>
             <span className={s.a_information_item_text}>
-              7 помилок при купівлі кухні
+            {dictionary.AnavText.card2}
             </span>
           </div>
         </Link>
@@ -53,20 +59,18 @@ export default function Aricles_nav() {
               />
             </div>
             <span className={s.a_information_item_text}>
-              Навіщо потрібен замір перед замовлення меблів?
+            {dictionary.AnavText.card3}
             </span>
           </div>
         </Link>
       </div>
       <p className={s.a_information_item_text_bottom}>
-        Ми створюємо унікальний стиль за допомогою якісних меблів. Повний цикл
-        виготовлення меблів в Києві та Закарпатській області під замовлення і в
-        строк!
+      {dictionary.AnavText.bottom}
       </p>
       <Link className={s.link_button} href="./pages/portfolio">
         <div className={s.button_container}>
           <button className={s.default_button}>
-            Більше статей
+          {dictionary.AnavText.button}
             <Image
               className={s.buttom_img}
               src="/article.svg"

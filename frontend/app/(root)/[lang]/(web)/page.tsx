@@ -13,12 +13,12 @@ export default async function Home({ params }: { params: { lang: TLocales } }) {
   return (
     <main>
       <Typer_text dictionary={dictionary} />
-      <Swiper_home />
-      <Nav_cards />
-      <About_order />
-      <Articles_nav />
-      <Mebel_zakaz />
-      <Perevagi />
+      <Swiper_home dictionary={dictionary} />
+      <Nav_cards dictionary={dictionary} />
+      <About_order dictionary={dictionary} />
+      <Articles_nav dictionary={dictionary} />
+      <Mebel_zakaz dictionary={dictionary} />
+      <Perevagi dictionary={dictionary} />
     </main>
   );
 }

@@ -8,7 +8,13 @@ import Image from "next/image";
 
 import s from "./swiper_home.module.scss";
 
-export default function Swiper_home() {
+import { IDictionaries } from "@/dictionaries";
+
+interface SwiperTextProps {
+  dictionary: IDictionaries;
+}
+
+export default function Swiper_home({ dictionary }: SwiperTextProps) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -16,7 +22,7 @@ export default function Swiper_home() {
       <div className={s.call_button_container}>
         <div className={s.button_container_zakaz}>
           <button className={s.default_button} onClick={() => setIsOpen(true)}>
-            Замовити дзвінок
+            {dictionary.SwiperText.text1}
             <Image
               className={s.buttom_img}
               src="/phone.svg"

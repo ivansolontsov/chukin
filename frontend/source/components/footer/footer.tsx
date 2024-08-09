@@ -8,7 +8,13 @@ import { IconTelegram } from "@/source/components/icons/telegram"
 import { IconWhatsapp } from "@/source/components/icons/whatsapp"
 import { IconGmail } from "@/source/components/icons/gmail"
 
-export default function footer() {
+import { IDictionaries } from "@/dictionaries";
+
+interface FooterTextProps {
+  dictionary: IDictionaries;
+}
+
+export default function footer({ dictionary }: FooterTextProps) {
   return (
     <footer>
       <div className={s.footer_container}>
@@ -16,7 +22,7 @@ export default function footer() {
           <IconMainLogo />
         </div>
         <div className={s.footer_center_container}>
-          <Link className={s.link_button} href="./pages/portfolio"><div className={s.button_container_zakaz}><button className={s.default_button}>Як замовити меблі?</button></div></Link>
+          <Link className={s.link_button} href="./pages/portfolio"><div className={s.button_container_zakaz}><button className={s.default_button}>{dictionary.FooterText.text1}</button></div></Link>
         </div>
         <div className={s.footer_right_container}>
           <div className={s.footer_right_container_top}>

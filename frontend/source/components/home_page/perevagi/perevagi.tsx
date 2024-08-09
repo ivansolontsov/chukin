@@ -3,17 +3,23 @@
 import Image from "next/image";
 import s from "./perevagi.module.scss";
 
-export default function Home() {
+import { IDictionaries } from "@/dictionaries";
+
+interface PerevagiTextProps {
+  dictionary: IDictionaries;
+}
+
+export default function Home({ dictionary }: PerevagiTextProps) {
   return (
     <div className={s.perevagi_container}>
-      <h2 className={s.mebel_zakaz_title}>НАШІ ПЕРЕВАГИ</h2>
+      <h2 className={s.mebel_zakaz_title}>{dictionary.PerevagiText.title}</h2>
       <span className={s.mebel_zakaz_text1}>
-        НАШ КЛІЄНТ ЗАВЖДИ ЗАДОВОЛЕНИЙ!
+      {dictionary.PerevagiText.text}
       </span>
       <div className={s.perevagi_items}>
         <div className={s.perevagi_item}>
           <div className={s.perevagi_head}>
-            <span className={s.perevagi_tile}>ПУНКТУАЛЬНІСТЬ</span>
+            <span className={s.perevagi_tile}>{dictionary.PerevagiText.text1title}</span>
             <Image
               className={s.perevagi_img}
               src="/clock.svg"
@@ -23,13 +29,12 @@ export default function Home() {
             />
           </div>
           <p className={s.perevagi_text}>
-            Замовляючи меблі в Chukin•m, ви можете розраховувати на виконання
-            вашого замовлення точно в обумовлений термін.
+          {dictionary.PerevagiText.text1}
           </p>
         </div>
         <div className={s.perevagi_item}>
           <div className={s.perevagi_head}>
-            <span className={s.perevagi_tile}>ЯКІСТЬ</span>
+            <span className={s.perevagi_tile}>{dictionary.PerevagiText.text2title}</span>
             <Image
               className={s.perevagi_img}
               src="/dimond.svg"
@@ -39,14 +44,12 @@ export default function Home() {
             />
           </div>
           <p className={s.perevagi_text}>
-            Ми створюємо якісні та надійні меблі, які прослужать вам не один
-            рік. Крім того, вони будуть красивими і чудово доповнять будь-який
-            інтер'єр.
+          {dictionary.PerevagiText.text2}
           </p>
         </div>
         <div className={s.perevagi_item}>
           <div className={s.perevagi_head}>
-            <span className={s.perevagi_tile}>НАДІЙНІСТЬ</span>
+            <span className={s.perevagi_tile}>{dictionary.PerevagiText.text3title}</span>
             <Image
               className={s.perevagi_img}
               src="/like.svg"
@@ -56,8 +59,7 @@ export default function Home() {
             />
           </div>
           <p className={s.perevagi_text}>
-            Надійність наших меблів підтверджена багаторічним досвідом,
-            професійним підходом і вищим рівнем виконання.
+          {dictionary.PerevagiText.text3}
           </p>
         </div>
       </div>
